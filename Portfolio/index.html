@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AtheerNamrood | Portfolio</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f2f2;
+      color: #2d3436;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #2c3e50;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #fdcb6e;
+    }
+
+    /* Hero */
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+        url('https://images.unsplash.com/photo-1508780709619-79562169bc64') no-repeat center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+    }
+    header h1 {
+      font-size: 3rem;
+      background-color: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* Centered Profile Image */
+    .profile {
+      text-align: center;
+    }
+    .profile img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      filter: contrast(1.2) brightness(0.9);
+      margin-bottom: 20px;
+    }
+
+    /* Portfolio Grid */
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      flex: 1;
+      min-width: 280px;
+      background: #dfe6e9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+    th, td {
+      padding: 12px;
+      border: 2px solid #636e72;
+      text-align: center;
+    }
+    th {
+      background-color: #0984e3;
+      color: white;
+    }
+
+    /* Two Column Layout */
+    .two-cols {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .col {
+      flex: 1;
+      min-width: 280px;
+      background: #ffeaa7;
+      padding: 20px;
+      color: #2d3436;
+      height: 200px;
+    }
+
+    /* Paragraph Hover Effect */
+    p:hover {
+      color: #d63031;
+      transition: color 0.3s ease;
+    }
+
+    /* Image Overlay */
+    .overlay-box {
+      position: relative;
+      margin-top: 40px;
+    }
+    .overlay-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 1.5rem;
+      border-radius: 8px;
+    }
+    .overlay-box img:hover {
+      opacity: 0.7;
+    }
+
+    /* Video */
+    .video-container {
+      position: relative;
+      margin-top: 30px;
+    }
+    video {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .video-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      font-size: 1.2rem;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#media">Media</a>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home">
+    <h1>Hi, I'm AtheerNamrood — Creative Thinker & Web Enthusiast</h1>
+  </header>
+
+  <!-- Profile Section -->
+  <section  class="profile">
+    <h2>About</h2>
+    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="AtheerNamrood" />
+  </section>
+
+  <!-- Skills Table -->
+  <section id="skills">
+    <h2>Skills Overview</h2>
+    <table>
+      <tr>
+        <th>Skill</th>
+        <th>Level</th>
+      </tr>
+      <tr>
+        <td>HTML/CSS</td>
+        <td>Advanced</td>
+      </tr>
+      <tr>
+        <td>JavaScript</td>
+        <td>none</td>
+      </tr>
+      <tr>
+        <td>React</td>
+        <td>none</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Image Overlay Section -->
+  <section id="gallery">
+    <h2>Creative Gallery</h2>
+    <div class="overlay-box">
+      <img src="https://cdn.pixabay.com/photo/2025/08/06/16/56/fjords-9759279_1280.jpg" alt="Project Image" />
+      <div class="overlay-text">Hover to Fade Image</div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>Who I Am</h2>
+    <div class="two-cols">
+      <div class="col">
+        <h3>My Background</h3>
+        <p>I’m a student focused on building useful and beautiful web experiences.</p>
+      </div>
+      <div class="col">
+        <h3>My Goals</h3>
+        <p>To master full-stack development, contribute to open-source, and join a great team.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section id="media">
+    <h2>Behind the Code</h2>
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-text">Coding is my happy place ☁️</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>© 2025 AtheerNamrood | Made with ❤️ by Atheer</p>
+  </footer>
+</body>
+</html>
